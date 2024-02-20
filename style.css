@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin : 0;
+    padding:0;
+    font-family: 'poppins' , sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: auto;
+}
+
+header{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top:0;
+    left:0;
+    padding : 30px 130px;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2rem;
+    color : black;
+    user-select: none;
+}
+
+.navigation a{
+    position: relative;
+    color : black;
+    text-decoration: none;
+    padding-right: 20px;
+    font-size: 1.1rem;
+    margin-left: 20px;
+   padding: 6px 15px;
+   font-weight: 600;
+   transition: .5s;
+}
+.navigation a:hover,
+.navigation a.active{
+    color : #333;
+}
+
+.navigation a span{
+    position: absolute;
+    background: white;
+    top : 0;
+    left:0;
+    width : 100%;
+    height : 100%;
+    border-radius: 50px;
+    z-index: -1;
+    transform: scale(0);
+    transition: .5s;
+    opacity: 0;
+}
+
+.navigation a:hover span , 
+.navigation a.active span {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.parallax {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('img/background1.jpg') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+   z-index: -1;
+}
+#text {
+    position: relative;
+    color : whitesmoke;
+    font-size: 10rem;
+    text-shadow: 2px 4px 5px black;
+    z-index: -1;
+}
+.parallax img{
+    position: absolute;
+    top : 0;
+    left: 0;
+    width : 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.parallax img#left-building{
+     width: 50%;
+     height: 50%;
+    position: fixed;
+    top : 360px;
+    filter: brightness(1.2);
+
+    transform: translateX(-100px);
+}
+
+
+.parallax img#right-building{
+    position: fixed;
+   width: 10%;
+   transform: translateX(1350px);
+}
+
+.sec{
+    position: relative;
+    background: #020912;
+    padding : 30px 100px;
+}
+
+.sec h2{
+    color : white;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.sec h4{
+    color : white;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.sec p{
+    color : white;
+    font-size: 1em;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.sec a{
+    color : red;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+.sec a::before{
+    content: '-';
+    color : black;
+    user-select: none;
+    cursor: none;
+}
+
+
+
+
